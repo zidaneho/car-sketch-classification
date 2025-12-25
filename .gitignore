@@ -1,5 +1,6 @@
 data/
 model_data/
+.quickdrawcache/
 
 __pycache__/
 *.pyc

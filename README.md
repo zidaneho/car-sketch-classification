@@ -25,39 +25,31 @@ The dataset consists of  grayscale bitmap files stored in `.npy` format. Because
 
 Once the data is downloaded, use the main training notebook to build the model.
 
-1. Open `dataset.ipynb`.
+Open `dataset.ipynb`.
 
-
-2. 
 **Data Preprocessing**: The notebook loads the raw numpy arrays, concatenates them into binary classes, and converts the grayscale images into 3-channel pseudo-RGB tensors resized to .
 
-
-3. 
 **Transfer Learning**: The model uses a pre-trained **MobileNetV2** backbone with frozen weights. The classifier head is replaced with a custom structure:
 
-
-* 
 **Linear Layer** (1280 to 128) 
 
 
-* 
+
 **ReLU Activation** 
 
 
-* 
+
 **Dropout** (0.2) 
 
 
-* 
+
 **Final Linear Layer** (1 output) with **Sigmoid Activation** 
 
 
 
 
-4. **Training**: Run the training loop. By default, it runs for 3 epochs using the Adam optimizer and Binary Cross Entropy loss.
-
-
-5. 
+**Training**: Run the training loop. By default, it runs for 3 epochs using the Adam optimizer and Binary Cross Entropy loss.
+ 
 **Saving**: After reaching an expected accuracy of approximately **93.97%**, the model weights are saved to `model_data/car_sketch_weights.pth`.
 
 
@@ -66,9 +58,6 @@ Once the data is downloaded, use the main training notebook to build the model.
 
 The current implementation achieves:
 
-* 
 **Training Loss**: ~0.18 after 3 epochs.
 
-
-* 
 **Test Accuracy**: ~93.97%.
